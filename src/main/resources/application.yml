@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: leetcode-api
+debug: true
+
+leetcode:
+  cookie: ${LEETCODE_SESSION}
+  csrftoken: ${LEETCODE_CSRF_TOKEN}
+  url: "https://leetcode.com"
+  username: ${LEETCODE_USERNAME}
+  graphql-url: "https://leetcode.com/graphql"
