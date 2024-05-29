@@ -1,15 +1,23 @@
 package in.rahulojha.leetcodeapi.service;
 
 
-import in.rahulojha.leetcodeapi.entity.GlobalData;
-import in.rahulojha.leetcodeapi.entity.QuestionMetaData;
-import in.rahulojha.leetcodeapi.entity.RecentACSubmission;
+import in.rahulojha.leetcodeapi.entity.*;
 
 import java.util.List;
 import java.util.Map;
 
 
 public interface LeetCodeService {
+
+
+
+    /**
+     * Retrieves the site announcements.
+     *
+     * @return The site announcements.
+     */
+    SiteAnnouncement getSiteAnnouncements();
+
     /**
      * Retrieves a list of recent Accepted Submissions based on the username and limit.
      *
@@ -36,4 +44,71 @@ public interface LeetCodeService {
      * @return The global data.
      */
     GlobalData getGlobalData();
+
+    /**
+     * Retrieves the problemset study plan.
+     *
+     * @return The problemset study plan.
+     */
+    List<ProblemsStudyPlanAds> getProblemsetStudyPlan();
+
+    /**
+     * Retrieves the daily coding challenge question.
+     *
+     * @return The daily coding challenge question.
+     */
+    DailyCodingChallengeQuestion getActiveDailyCodingChallengeQuestion();
+
+
+    /**
+     * Retrieves the coding challenge medal.
+     * @param year The year.
+     * @param month The month.
+     * @return The coding challenge medal.
+     */
+    CodingChallengeMedal getCodingChallengeMedal(long year, long month);
+
+    /**
+     * Retrieves the current timestamp.
+     *
+     * @return The current timestamp.
+     */
+    CurrentTimestamp getCurrentTimestamp();
+
+    MyStudyPlan getMyStudyPlan(long offset, long limit, String progressType);
+
+    // docstring
+
+    /**
+     * Retrieves the daily coding challenge record.
+     * @param year The year.
+     * @param month The month.
+     * @return The daily coding challenge record.
+     */
+    DailyCodingChallengeRecord getDailyCodingChallengeRecord(long year, long month);
+
+
+    UPCOnboardingStatus getUPCOnboardingStatus();
+    /**
+     * Retrieves the streak counter.
+     *
+     * @return The streak counter.
+     */
+    StreakCounter getStreakCounter();
+
+    /**
+     * Retrieves the time travel ticket info.
+     *
+     * @return The time travel ticket info.
+     */
+    TimeTravelTicketInfo getTimeTravelTicketInfo();
+
+    /**
+     * Retrieves the user session progress.
+     *
+     * @param username The username of the user.
+     * @return The user session progress.
+     */
+    UserSessionProgress getUserSessionProgress(String username);
+
 }

@@ -3,9 +3,7 @@ package in.rahulojha.leetcodeapi.service.impl;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import in.rahulojha.leetcodeapi.entity.GlobalData;
-import in.rahulojha.leetcodeapi.entity.QuestionMetaData;
-import in.rahulojha.leetcodeapi.entity.RecentACSubmission;
+import in.rahulojha.leetcodeapi.entity.*;
 import in.rahulojha.leetcodeapi.service.LeetCodeService;
 import in.rahulojha.leetcodeapi.utils.HTTPUtils;
 import lombok.NonNull;
@@ -139,6 +137,116 @@ public class LeetCodeServiceImpl implements LeetCodeService {
         } catch (IOException e) {
             log.error(ERROR_OCCURRED, e);
         }
+        return null;
+    }
+
+    /**
+     * Retrieves the problemset study plan.
+     *
+     * @return The problemset study plan.
+     */
+    @Override
+    public List<ProblemsStudyPlanAds> getProblemsetStudyPlan() {
+        return List.of();
+    }
+
+    /**
+     * Retrieves the daily coding challenge question.
+     *
+     * @return The daily coding challenge question.
+     */
+    @Override
+    public DailyCodingChallengeQuestion getActiveDailyCodingChallengeQuestion() {
+        return null;
+    }
+
+    /**
+     * Retrieves the coding challenge medal.
+     *
+     * @param year  The year.
+     * @param month The month.
+     * @return The coding challenge medal.
+     */
+    @Override
+    public CodingChallengeMedal getCodingChallengeMedal(long year, long month) {
+        return null;
+    }
+
+    /**
+     * Retrieves the current timestamp.
+     *
+     * @return The current timestamp.
+     */
+    @Override
+    public CurrentTimestamp getCurrentTimestamp() {
+        return null;
+    }
+
+    /**
+     * @param offset
+     * @param limit
+     * @param progressType
+     * @return
+     */
+    @Override
+    public MyStudyPlan getMyStudyPlan(long offset, long limit, String progressType) {
+        return null;
+    }
+
+    /**
+     * Retrieves the daily coding challenge record.
+     *
+     * @param year  The year.
+     * @param month The month.
+     * @return The daily coding challenge record.
+     */
+    @Override
+    public DailyCodingChallengeRecord getDailyCodingChallengeRecord(long year, long month) {
+        return null;
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public UPCOnboardingStatus getUPCOnboardingStatus() {
+        return null;
+    }
+
+    /**
+     * Retrieves the streak counter.
+     *
+     * @return The streak counter.
+     */
+    @Override
+    public StreakCounter getStreakCounter() {
+        return null;
+    }
+
+    /**
+     * Retrieves the time travel ticket info.
+     *
+     * @return The time travel ticket info.
+     */
+    @Override
+    public TimeTravelTicketInfo getTimeTravelTicketInfo() {
+        return null;
+    }
+
+    /**
+     * Retrieves the user session progress.
+     *
+     * @param username The username of the user.
+     * @return The user session progress.
+     */
+    @Override
+    public UserSessionProgress getUserSessionProgress(String username) {
+        return null;
+    }
+
+    // TODO: implement site announcements
+    @Override
+    public SiteAnnouncement getSiteAnnouncements() {
         return null;
     }
 
